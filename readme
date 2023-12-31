@@ -1,0 +1,72 @@
+# NLP Document Summarization Backend
+
+This repository contains the backend code for an NLP Document Summarization application. The application processes raw data before making it available through API endpoints. Below are the main aspects of the backend:
+
+## Data Engineering/Processing
+The raw data, typically in CSV format, is processed to extract unique document names and their corresponding text segments. These document segments are then used for text summarization.
+
+## Main Functionalities
+- **Update Document Segment**: Allows updating or adding new document segments.
+- **Get Document Text**: Retrieves the summarized text based on the selected document.
+- **Get All Document Names**: Returns a list of all unique document names.
+- **Get All Document Segments**: Returns all document segments for debugging purposes.
+- **Extract Document Names**: Reads an uploaded CSV file, extracts unique document names, and returns the names.
+- **Summarize Text**: Utilizes a pre-trained summarization model to generate summaries for document segments.
+
+## Key Challenges
+- Ensuring efficient update and retrieval of document segments.
+- Integrating the summarization model seamlessly into the Flask application.
+- Handling file uploads and data extraction from CSV files.
+
+## Future Improvements
+If more time were available, the following improvements could be made:
+- Implementing user authentication for secure access.
+- Optimizing the summarization process for larger datasets.
+- Enhancing error handling and logging for better debugging.
+- Implementing caching mechanisms for improved performance.
+
+## How to Run
+
+1. Install dependencies:
+
+   pip install -r requirements.txt
+
+2. python app.py
+The backend server will start running at http://localhost:5000/.
+
+
+# NLP Document Summarization Frontend
+
+This repository contains the frontend code for an NLP Document Summarization application. The application communicates with the backend API to provide a user interface for interacting with the summarization features. Below are the main aspects of the frontend:
+
+## Key Functionalities
+- **File Upload**: Allows users to upload a CSV file containing document data.
+- **Document Selection**: Enables users to select a specific document or choose to summarize all documents.
+- **Summarization Display**: Displays the summarization results for the selected document.
+
+## API Endpoints
+- **GET `/get-all-doc-names`**: Fetches all unique document names.
+- **GET `/get-all-doc-segments`**: Fetches all document segments for debugging purposes.
+- **POST `/extract-doc-names`**: Handles file upload and extracts document names from the uploaded CSV file.
+- **POST `/summarize`**: Requests summarization based on the selected document or all documents.
+
+## Key Challenges
+- Integrating with the backend API for seamless data flow.
+- Managing state and updating the UI based on user interactions.
+- Handling asynchronous operations, such as file uploads and API requests.
+
+## Future Improvements
+If more time were available, the following improvements could be made:
+- Implementing more advanced UI features for a better user experience.
+- Adding loading indicators during API requests for better feedback.
+- Implementing error handling and user prompts for various scenarios.
+- Enhancing overall styling and responsiveness of the UI.
+
+## How to Run
+
+1. Install dependencies:
+
+   npm install
+
+2. npm start
+The frontend development server will start running at http://localhost:3000/.
