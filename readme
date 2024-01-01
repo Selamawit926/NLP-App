@@ -69,4 +69,4 @@ If more time were available, the following improvements could be made:
    npm install
 
 2. npm start
-The frontend development server will start running at http://localhost:3000/.
+The frontend development server will start running at http://localhost:3000/
