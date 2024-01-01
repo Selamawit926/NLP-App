@@ -1,12 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import NlpPage from './nlp';
 
 function App() {
   return (
-    <div className="App">
-      <NlpPage />
-    </div>
+    <main>
+        <div className="main">
+          <div className="gradient" />
+        </div>
+
+        <div className="App">
+          <NlpPage />
+        </div>
+    </main>
+    
   );
 }
 
